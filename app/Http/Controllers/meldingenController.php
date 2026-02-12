@@ -23,3 +23,5 @@ $statement = $conn->prepare($query);
 //4. Execute
 $statement->execute([":attractie" => $attractie, ":type" => $type, ":capaciteit" => $capaciteit,
     ":prioriteit" => $prioriteit, ":melder" => $melder, ":overige_info" => $overige_info,]);
+
+header("Location: ../../../index.php");

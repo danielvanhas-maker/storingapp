@@ -40,4 +40,5 @@ else
     {
         $errormsg = "Ongeldige naam of wachtwoord!";
         header("Location: ../../../login.php?msg=$errormsg");
+        exit;
     }

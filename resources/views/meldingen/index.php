@@ -1,6 +1,7 @@
 <?php require_once __DIR__.'/../../../config/config.php'; ?>
 <!doctype html>
 <html lang="nl">
+<?php session_start(); ?>
 
 <head>
     <title>StoringApp / Meldingen</title>
@@ -10,6 +11,12 @@
 <body>
 
     <?php require_once __DIR__.'/../components/header.php'; ?>
+
+    <?php if (!isset($_SESSION['logged']))
+    {
+        header("Location: ../../../index.php");
+    }
+    ?>
 
     <div class="container">
         <h1>Meldingen</h1>
